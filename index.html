@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Designs By King Redesign</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+
+    <body>
+        <div class="header-container">
+            <div class="left-section">
+                <div class="logo">
+                    <img src="assets/new-logo.png" alt="Redesigned Designs By King logo">
+                </div>
+
+                <div class="nav-wrapper">
+                    <div class="nav-bar">
+                        <nav>
+                            <ul class="nav-links">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#" class="highlighted">Products</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="icon">
+                    <img src="assets/Search.png" alt="Magnifying Glass Icon">
+                </div>
+                    
+                <div class="icon">
+                    <img src="assets/Shopping Cart.png" alt="Shopping Cart Icon">
+                </div>
+            </div>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <img src="assets/Menu.png" alt="Menu icon">
+            </div>
+        </div> 
+
+        <div call="hamburger-dropdown" id="hamburgerDropDown">
+            <ul class="hamburger-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="highlighted">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+
+        <div class="content-container">
+            <div class="carousel-container">
+                <div class="mySlides fade">
+                    <img src="assets/kayvonne.png" alt="Boston Crusaders 2019 Action Shot" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="assets/heather.png" alt="Pride of Cincinnati 2016 Action Shot" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="assets/some-show.png" alt="Sabre Action Shot" style="width:100%">
+                </div>
+            
+            <br>
+
+
+                <div class="carousel-overlay">
+                    <button class="hover-button">
+                        <span class="text">Apparel and More</span>
+                        <img src="assets/apparel image.png" alt="Image of Apparel">
+                    </button>
+
+                    <button class="hover-button">
+                        <span class="text">Bags</span>
+                        <img src="assets/bags image.png" alt="Image of Bags">
+                    </button>
+
+                    <button class="hover-button">
+                        <span class="text">Gloves</span>
+                        <img src="assets/glove image.png" alt="Image of Gloves">
+                    </button>
+
+                    <button class="hover-button">
+                        <span class="text">Rifles</span>
+                        <img src="assets/rifle image.png" alt="Image of Rifle">
+                    </button>
+
+                    <button class="hover-button">
+                        <span class="text">Sabres</span>
+                        <img src="assets/sabre image.png" alt="Image of Sabres">
+                    </button>
+                    
+
+                </div>
+            </div>
+                
+
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    <script src="script.js"></script>
+  </body>
+</html>
