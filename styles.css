@@ -1,4 +1,10 @@
 * {box-sizing:border-box}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 body {
   margin: 0;
   display: flex;
@@ -10,8 +16,8 @@ body {
 }
 .header-container {
   display: flex;
-  justify-content: space-between;
-  position: relative;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 1200px;
   padding: 20px;
@@ -21,6 +27,14 @@ body {
   margin-bottom: 20px;
 }
 
+.content-container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .left-section {
   display: flex;
   flex-direction: column;
@@ -28,17 +42,21 @@ body {
 }
 
 .logo img {
-  height: 20vw;
-  width: auto;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10px auto;
   margin-bottom: 10px;
 }
 
 .right-section {
   display: flex;
-  flex-direction: row;
   gap: 15px;
-  padding-left: 10px;
-  padding-right: 30px;
+  position: absolute;
+  right: 30px;
+  top:35px;
 }
 
 .icon img {
@@ -54,6 +72,7 @@ body {
   background: black;
   padding: 10px 20px;
   border-radius: 12px;
+  position: relative;
 }
 
 
@@ -81,17 +100,21 @@ body {
 }
 
 
-.carousel-container {
-  width: 90%;
-  max-width: 1200px;
-  position: relative; 
-  margin: 0 auto;
+
+
+.mySlides {
+  position:absolute;
+  width: auto;
+  height: 80vh;
+
 }
+
 .search-container
  img {
   height: 60px;
   width: 60px;
 }
+
 .shopping-cart-container
  img {
   height: 60px;
@@ -99,17 +122,13 @@ body {
 }
 
 .mySlides  img{
-  border-style: 3px solid black;
-  border: 4px solid black;
+  border: 5px solid black;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  width: 50%;
-  height: 50%;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
 }
 
-
-.mySlides {
-  display: none;
-}
 
 .active, .dot:hover {
   background-color: #717171;
@@ -139,22 +158,30 @@ body {
   color: black;
 }
 
+
+
 .carousel-container {
+  flex: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 80%;
+  height: 100%;
   margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 30px;
 }
 
-.carousel-overlay {
+.carousel-overlay { 
   position: absolute;
-  width: 80%;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  z-index: 10;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  z-index: 1;
+
 }
 
 .carousel-overlay button {
@@ -241,57 +268,32 @@ body {
   display: block;
 }
 
-@media (max-width: 770px) {
+@media (min-width: 480px) and (max-width:1100px) {
 
-  body{
-    padding: 10px;
-    padding-top: 0px;
-  }
-
-  .carousel-container {
-    height: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .content-container {
-    height: 90vw;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .nav-wrapper {
-    align-items: center;
-    padding-left: 20px;
-  }
- 
 
   .mySlides img {
-    height: 75vw;
+    height: 80vh;
     width: auto;
   }
 
+  .nav-links li a{
+    font-size: 14px;
+    padding: 2px 4px;
+  }
 
-  .logo img {
-    width: 500px;
-
+  .nav-wrapper {
+    padding: 10p 25px
   }
 }
 
-
-@media (max-width: 480px) {
-  .logo img {
-    height: 50px;
+@media (max-width: 479px) {
+  .carousel-overlay{
+    display: none;
   }
 
-  .icon img {
-    height: 25px;
-  }
-
-  .mySlides img {
-    width: 90%;
+  .nav-links li a{
+    font-size: 10px;
+    padding: 2px 4px;
   }
 }
-
-
 
